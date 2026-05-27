@@ -1,4 +1,4 @@
-# agentic-modulith
+# Agentic-Modulith
 
 AI-native modular monolith starter built with ASP.NET Core, PostgreSQL, React, and Docker.
 
