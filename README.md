@@ -1,240 +1,370 @@
 # Agentic-Modulith
 
-AI-native modular monolith starter built with ASP.NET Core, PostgreSQL, React, and Docker.
+AI-governed modular monolith engineering platform for building scalable, high-performance, multitenant SaaS systems with disciplined architecture and AI-native development workflows.
 
-Designed for scalable enterprise architecture, low-cost deployment, and seamless agentic coding workflows across GitHub Copilot, Claude, and Codex.
+The platform is designed for:
 
----
-
-# Why agentic-modulith?
-
-Modern applications often become difficult to maintain due to:
-
-* tightly coupled architectures
-* uncontrolled abstractions
-* premature microservices adoption
-* inconsistent AI-generated code
-
-`agentic-modulith` solves this by providing:
-
-* a modular monolith architecture
-* strong architectural boundaries
-* AI-agent friendly repository conventions
-* production-grade engineering practices
-* low operational complexity
-* future-ready scalability
-
-This repository is optimized for:
-
-* AI-assisted development
-* long-term maintainability
-* clean architecture
-* fast developer onboarding
-* enterprise-grade scalability
+- modular architecture
+- high-performance systems
+- operational simplicity
+- AI-assisted engineering
+- low deployment complexity
+- enterprise-grade scalability
+- long-term maintainability
 
 ---
 
-# Tech Stack
+# Vision
 
-## Backend
+Modern software systems often become difficult to scale and maintain because of:
 
-* ASP.NET Core 10
-* PostgreSQL
+- premature microservices adoption
+- uncontrolled abstractions
+- architecture drift
+- inconsistent AI-generated code
+- hidden framework behavior
+- operational complexity
+- poor performance visibility
 
-## Frontend
+`agentic-modulith` exists to solve these problems through:
 
-* React
-* JavaScript
-* Vite
-* React Query
+- modular monolith architecture
+- AI-governed engineering standards
+- explicit architectural boundaries
+- performance-oriented engineering
+- tenant-safe implementation patterns
+- observable and benchmarkable systems
+- stack-flexible templates
 
-## Infrastructure
+The goal is not simply generating software faster.
 
-* Docker
-* Docker Compose
-* NGINX
-* OpenTelemetry
+The goal is generating systems that remain:
+
+- maintainable
+- scalable
+- observable
+- performant
+- production-ready
+- architecturally consistent
+
+over time.
 
 ---
 
-# Architecture
+# Core Philosophy
 
-This project follows a **Modular Monolith Architecture**.
+This platform prioritizes:
 
-Instead of splitting systems into microservices too early, the application is organized into isolated modules with explicit boundaries while remaining deployable as a single unit.
+- modularity over distribution
+- operational simplicity over infrastructure complexity
+- explicitness over hidden magic
+- maintainability over clever abstractions
+- performance awareness by default
+- scalable architecture without premature decomposition
 
-Benefits:
+The default architecture strategy is:
 
-* simpler deployments
-* lower infrastructure cost
-* faster development velocity
-* easier debugging
-* future microservice extraction capability
+> Modular Monolith First
 
-Example structure:
+The platform intentionally avoids introducing distributed complexity until operationally justified.
 
-```txt id="53pgre"
-modules/
-  auth/
-  users/
-  billing/
-  notifications/
+---
+
+# AI-Governed Engineering
+
+This repository is designed specifically for AI-assisted software engineering workflows.
+
+Supported AI tooling includes:
+
+- GitHub Copilot
+- Claude Code
+- OpenAI Codex
+
+The repository includes AI governance standards through:
+
+- `AGENTS.md`
+- `CLAUDE.md`
+- Copilot instructions
+- architecture standards
+- engineering standards
+- implementation workflows
+- ADR conventions
+
+These rules ensure that AI-generated features:
+
+- preserve architectural boundaries
+- remain tenant-safe
+- follow performance standards
+- avoid architecture drift
+- remain maintainable
+- remain observable
+- follow consistent engineering practices
+
+---
+
+# Architecture Philosophy
+
+The platform follows a:
+
+- Modular Monolith Architecture
+- Vertical Slice Architecture
+- Feature-Oriented Design
+
+Applications are designed to remain:
+
+- modular internally
+- deployable as a single unit
+- operationally simple
+- highly observable
+- scalable without unnecessary infrastructure fragmentation
+
+---
+
+# Why Modular Monolith?
+
+Instead of prematurely splitting systems into microservices, the platform organizes systems into isolated business modules with explicit boundaries while keeping deployment and operations simple.
+
+Benefits include:
+
+- simpler deployments
+- lower infrastructure cost
+- easier debugging
+- lower operational overhead
+- faster developer onboarding
+- easier performance optimization
+- simplified observability
+- easier local development
+- future extraction capability when truly required
+
+Modules own:
+
+- business logic
+- persistence
+- validation
+- authorization
+- workflows
+- contracts
+- events
+
+---
+
+# Performance-First Engineering
+
+Performance is treated as a core engineering responsibility.
+
+The platform enforces:
+
+- explicit persistence behavior
+- projection-oriented queries
+- observable APIs
+- benchmarkable workflows
+- efficient query design
+- tenant-safe persistence
+- low allocation patterns
+- scalable request handling
+
+The standards explicitly discourage:
+
+- N+1 queries
+- unnecessary allocations
+- excessive abstraction layers
+- hidden ORM behavior
+- unnecessary loops
+- blocking I/O
+- unbounded operations
+- reflection-heavy execution
+
+Performance-sensitive systems should remain measurable and observable.
+
+---
+
+# API Philosophy
+
+The platform is API-style flexible.
+
+Supported approaches may include:
+
+- REST
+- GraphQL
+- gRPC
+- WebSockets
+- MQTT
+- event-driven messaging
+
+API style selection should be intentional and use-case driven.
+
+Examples:
+
+- REST for standard business APIs
+- GraphQL for aggregation-heavy querying
+- gRPC for high-performance internal communication
+- MQTT for lightweight event-driven communication
+- WebSockets for realtime workflows
+
+---
+
+# Authentication & Authorization
+
+The platform supports enterprise-grade authentication and authorization workflows.
+
+Preferred backend orientation includes:
+
+- ASP.NET Core Identity
+- JWT authentication
+- refresh token workflows
+- claims-based identity
+- permission-based RBAC
+- tenant-aware authorization
+
+Authorization is permission-oriented rather than role-only.
+
+Example permissions:
+
+```txt
+users.read
+users.write
+billing.manage
+tenant.settings
+reports.export
 ```
 
-Each module owns:
+---
 
-* business logic
-* validation
-* persistence
-* contracts
-* application workflows
+# Multitenancy
+
+Multitenancy is a first-class architectural concern.
+
+Supported tenancy strategies may include:
+
+- shared database
+- row-level security
+- schema-per-tenant
+- database-per-tenant
+- hybrid tenancy
+
+All generated features are expected to remain tenant-aware unless explicitly documented otherwise.
+
+Tenant isolation failures are considered critical architectural violations.
 
 ---
 
-# AI-Native Development
+# Technology Orientation
 
-This repository is designed specifically for modern AI-assisted engineering workflows.
+The platform is stack-flexible while remaining strongly optimized for modern ASP.NET Core backend architectures.
 
-Supported tools:
+Preferred backend orientation:
 
-* GitHub Copilot
-* Claude Code
-* OpenAI Codex
+- ASP.NET Core
+- Minimal APIs
+- Dapper-first persistence
+- PostgreSQL
+- asynchronous workflows
 
-The repository includes:
-
-* `AGENTS.md`
-* `CLAUDE.md`
-* Copilot instructions
-* architecture documentation
-* coding standards
-* task-driven workflows
-
-These conventions help AI agents:
-
-* generate consistent code
-* preserve architectural boundaries
-* avoid unnecessary abstractions
-* follow repository standards
+Frontend architecture remains framework-flexible and modular.
 
 ---
 
 # Repository Structure
 
-```txt id="7t6v6l"
-apps/
-  api/
-  web/
-
-modules/
-  auth/
-  users/
-  billing/
-  notifications/
-
-infrastructure/
-  persistence/
-  observability/
-  caching/
-
-docs/
-  architecture.md
-  coding-standards.md
-  ai-workflow.md
+```txt
+repo/
+│
+├── AGENTS.md
+├── CLAUDE.md
+├── README.md
+│
+├── .github/
+│   └── copilot-instructions.md
+│
+├── docs/
+│   ├── standards/ (RULES AND GOVERNANCE)
+│   ├── architecture/ (IMPLEMENTATION EXPLANATIONS/ BLUEPRINTS)
+│   ├── decisions/ (WHY?)
+│   └── guides/ (HOW?)
+│
+├── templates/
+│   ├── dotnet/
+│   │   └── modular-monolith/
+│   │
+│   ├── nodejs/
+│   └── frontend/
+│
 ```
 
 ---
 
-# Getting Started
+# Standards-Driven Development
 
-## Prerequisites
+The repository includes engineering standards for:
 
-* .NET 10 SDK
-* Node.js LTS
-* Docker
-* PostgreSQL
+- architecture
+- modules
+- workflows
+- persistence
+- authorization
+- multitenancy
+- messaging
+- performance
+- observability
+- testing
+- frontend systems
+- API design
 
----
-
-## Start Development Environment
-
-```bash id="ns0qye"
-docker compose up
-```
-
----
-
-## Backend
-
-```bash id="zhny52"
-cd apps/api
-
-dotnet restore
-dotnet build
-dotnet run
-```
-
----
-
-## Frontend
-
-```bash id="7ntiyd"
-cd apps/web
-
-npm install
-npm run dev
-```
-
----
-
-# Development Principles
-
-This repository prioritizes:
-
-* modularity over complexity
-* explicitness over magic
-* maintainability over cleverness
-* scalability over premature optimization
-
-Guidelines:
-
-* keep modules isolated
-* prefer composition over inheritance
-* keep files small and focused
-* avoid speculative abstractions
-* enforce consistent patterns
+These standards exist to ensure architectural consistency across AI-generated implementations.
 
 ---
 
 # Deployment Philosophy
 
-The application is intentionally designed to:
+Applications generated from this platform are optimized for:
 
-* deploy as a single unit initially
-* minimize operational overhead
-* reduce infrastructure costs
-* scale incrementally when needed
+- single-unit deployment
+- operational simplicity
+- low infrastructure complexity
+- predictable scaling
+- easier observability
+- easier maintenance
 
-Recommended hosting:
+The platform intentionally prioritizes:
 
-* Hetzner
-* Railway
-* Fly.io
-* Coolify
+- modularity without operational fragmentation
+- scalability without premature distribution
+- performance without unnecessary infrastructure complexity
 
 ---
 
-# Long-Term Vision
+# Long-Term Direction
 
-`agentic-modulith` aims to become a production-grade foundation for:
+`agentic-modulith` aims to evolve into a complete AI-governed SaaS engineering ecosystem with:
 
-* enterprise applications
-* SaaS platforms
-* internal tooling
-* AI-native engineering workflows
-* scalable modular systems
+- stack-flexible templates
+- modular platform foundations
+- reusable architectural building blocks
+- scaffolding tools
+- AI-aware engineering standards
+- performance-oriented development workflows
+- multitenant-ready platform capabilities
 
 without introducing unnecessary operational complexity.
+
+---
+
+# Final Principle
+
+AI should accelerate disciplined engineering, not replace it.
+
+The purpose of this platform is to ensure that AI-generated systems remain:
+
+- maintainable
+- modular
+- performant
+- observable
+- scalable
+- secure
+- tenant-safe
+- production-ready
+
+through enforced architectural consistency and engineering discipline.
 
 ---
 
